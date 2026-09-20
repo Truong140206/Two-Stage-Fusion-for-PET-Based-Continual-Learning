@@ -16,6 +16,8 @@ Parameter-efficient continual learning can preserve a pre-trained backbone by as
 
 We introduce a two-stage fusion framework that augments an adapter-based pipeline with a complementary random-projection ridge head. The head works in a fixed feature space and is updated from accumulated second-order statistics, without retaining past examples or adding gradient updates to existing adapters. Its scores first refine the task proposal before re-matching and then support confidence-aware fusion with the final class logits.
 
+Evaluation across multiple datasets, seeds and pre-training settings examines routing, classification and retention separately, showing that the two evidence sources are complementary while their effects remain configuration-dependent.
+
 ## Pipeline
 
 <p align="center">
