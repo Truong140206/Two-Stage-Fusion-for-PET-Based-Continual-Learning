@@ -10,13 +10,17 @@
 
 ---
 
-## Abstract
+<div align="center">
 
-Parameter-efficient continual learning can preserve a pre-trained backbone by assigning compact adapters to incoming tasks. In the task-agnostic setting, however, inference couples two distinct decisions: selecting an adapter and recognising a class among all classes seen so far. These decisions are not equivalent, so a routing correction may leave classification unchanged or disrupt a prediction that was already correct.
+<h2>Abstract</h2>
 
-We introduce a two-stage fusion framework that augments an adapter-based pipeline with a complementary random-projection ridge head. The head works in a fixed feature space and is updated from accumulated second-order statistics, without retaining past examples or adding gradient updates to existing adapters. Its scores first refine the task proposal before re-matching and then support confidence-aware fusion with the final class logits.
+<p>Parameter-efficient continual learning can preserve a pre-trained backbone by assigning compact adapters to incoming tasks. In the task-agnostic setting, however, inference couples two distinct decisions: selecting an adapter and recognising a class among all classes seen so far. These decisions are not equivalent, so a routing correction may leave classification unchanged or disrupt a prediction that was already correct.</p>
 
-Evaluation across multiple datasets, seeds and pre-training settings examines routing, classification and retention separately, showing that the two evidence sources are complementary while their effects remain configuration-dependent.
+<p>We introduce a two-stage fusion framework that augments an adapter-based pipeline with a complementary random-projection ridge head. The head works in a fixed feature space and is updated from accumulated second-order statistics, without retaining past examples or adding gradient updates to existing adapters. Its scores first refine the task proposal before re-matching and then support confidence-aware fusion with the final class logits.</p>
+
+<p>Evaluation across multiple datasets, seeds and pre-training settings examines routing, classification and retention separately, showing that the two evidence sources are complementary while their effects remain configuration-dependent.</p>
+
+</div>
 
 ## Pipeline
 
@@ -77,5 +81,3 @@ Run the tests:
 ```bash
 .venv/bin/python -m pytest tests/ -q
 ```
-
-The implementation builds on [HRM-PET](https://github.com/wei-cheng777/HRM-PET). The random-projection ridge head follows [RanPAC](https://github.com/McDonnell-Research-Lab/RanPAC).
