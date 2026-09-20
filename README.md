@@ -1,10 +1,14 @@
-# Two-Stage Fusion for Routing and Classification in Parameter-Efficient Continual Learning
+<div align="center">
+
+<h1>Two-Stage Fusion for Routing and Classification in Parameter-Efficient Continual Learning</h1>
+
+<p>Thien Truong Nguyen · Quang Thai Tong · Thanh-Nga Hoang Thi · Quynh-Trang Pham Thi</p>
+
+<h3>SOICT 2026</h3>
+
+</div>
 
 ---
-
-Thien Truong Nguyen · Quang Thai Tong · Thanh-Nga Hoang Thi · Quynh-Trang Pham Thi
-
-### SOICT 2026
 
 ## Abstract
 
@@ -14,7 +18,9 @@ We introduce a two-stage fusion framework that augments an adapter-based pipelin
 
 ## Pipeline
 
-![Two-stage fusion pipeline](pipeline.png)
+<p align="center">
+  <img src="pipeline.png" alt="Two-stage fusion pipeline">
+</p>
 
 The random-projection scores are reused at two points: task routing and gated class-score fusion. The pre-trained backbone and earlier PET modules remain frozen.
 
