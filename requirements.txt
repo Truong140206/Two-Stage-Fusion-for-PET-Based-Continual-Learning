@@ -1,0 +1,20 @@
+# Core runtime dependencies.
+torch
+torchvision
+timm==0.6.7
+
+numpy
+scipy
+scikit-learn
+Pillow
+requests
+
+# six.moves.urllib is used by the dataset download helper.
+six
+
+# Only needed by tools/imagenet_a_from_parquet.py, which rebuilds ImageNet-A
+# and ImageNet-R from their parquet mirrors.
+pyarrow
+
+# Only needed to run the tests.
+pytest
